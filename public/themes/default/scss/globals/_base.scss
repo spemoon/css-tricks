@@ -1,0 +1,91 @@
+$width: 100%;
+$cashWidth: 100%;
+/*颜色值*/
+$blue: #10638f;
+$liteBlue: #49afcd;
+$orange: #f60;
+$green: #89CC56;
+
+@mixin ell($width: 90px) {
+    display: inline-block;
+    max-width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.clearfix {
+    @extend %clearfix;
+}
+
+.lf{
+    @extend %float-left;
+}
+
+.rt{
+    @extend %float-right;
+}
+
+.hide{
+    display: none;
+}
+.tips{
+    color: #ccc;
+}
+.error, .star{
+    color: $orange;
+}
+.success{
+    color: $green;
+}
+.star, .space{
+    padding: 0 5px;
+}
+
+.ml{
+    margin-left: 20px;
+}
+
+.mr{
+    margin-right: 20px;
+}
+.mt{
+    margin-top: 20px;
+}
+
+p{
+    font-size: 14px;
+    line-height: 24px;
+}
+.line{
+    border-bottom: 1px dotted #ccc;
+}
+
+/*输入框*/
+.ipt, .area-1{
+    height: 24px;
+    padding: 5px 0 5px 5px;
+    width: 350px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+}
+.ipt-1{
+    width: 150px;
+}
+.ipt-2{
+    width: 100px;
+}
+.ipt-error{
+    border: 1px solid #f60;
+}
+.area-1{
+    height: 100px;
+}
+
+.select-1{
+    width: 115px;
+    height: 30px;
+    padding: 5px 0;
+}
+

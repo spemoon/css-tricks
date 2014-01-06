@@ -1,0 +1,28 @@
+.icon{
+    width: 20px;
+    height: 20px;
+    background: url('../images/spirit.png') no-repeat scroll -15px 3px;
+    display: inline-block;
+    text-indent: -9999px;
+    &:hover{
+        background-position: -35px 3px;
+    }
+}
+.icon-sure{
+    background-position: -54px 3px;
+    &:hover{
+        background-position: -74px 3px;
+    }
+}
+.icon-cancle{
+    background-position: -94px 3px;
+    &:hover{
+        background-position: -114px 3px;
+    }
+}
+.icon-down-arrow {
+    background-position: 5px 10px;
+    &:hover {
+        background-position: 5px 10px;
+    }
+}

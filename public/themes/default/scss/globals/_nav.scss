@@ -1,0 +1,73 @@
+@mixin li-active {
+    &.active {
+        a {
+            background: $blue;
+            color: #fff;
+        }
+    }
+}
+
+%nav {
+    background: #fff;
+    .main {
+        li {
+            background: $grayLight;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+            a {
+                padding: 10px;
+                display: block;
+                color: $black;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .sub-nav {
+                li {
+                    background: #fff;
+                    border-bottom: none;
+                    a {
+                        padding: 10px 0 10px 20px;
+                        color: $black;
+                    }
+                    @include li-active;
+                }
+            }
+            &.hover {
+                a {
+                    color: #fff;
+                    background: $blue;
+                }
+                .sub-nav {
+                    display: block;
+                    li {
+                        a {
+                            background: #fff;
+                            &:hover {
+                                background: $blue;
+                                color: #fff;
+                            }
+                        }
+                        @include li-active;
+                    }
+                }
+            }
+            @include li-active;
+            &.display {
+                display: block;
+                &:hover {
+                    a {
+                        background: #fff;
+                        color: $black;
+                    }
+                }
+            }
+            &.display-none {
+                .sub-nav {
+                    display: none;
+                }
+            }
+        }
+    }
+}

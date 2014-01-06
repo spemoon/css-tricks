@@ -1,0 +1,50 @@
+%list-1 {
+    ul {
+        li {
+            position: relative;
+            .th {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .td {
+                padding: 0 0 0 80px;
+            }
+        }
+    }
+}
+
+%list-2 {
+    ul {
+        li {
+            a {
+                display: block;
+                padding: 10px 20px;
+                color: $grayDarker;
+                text-decoration: none;
+                border-bottom: 1px solid #DEDEDE;
+                border-top: 1px solid #fff;
+                @include ellipsis();
+                &:hover {
+                    background: #fff;
+                    text-decoration: none;
+                }
+                &.curr {
+                    background: #fff;
+                }
+            }
+            .sub-list {
+                a {
+                    padding-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+.list-1 {
+    @extend %list-1;
+}
+.list-2 {
+    @extend %list-2;
+}

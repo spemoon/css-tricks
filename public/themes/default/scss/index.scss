@@ -1,0 +1,51 @@
+@import './core/_setting.scss';
+@import './core/_reset.scss';
+@import './core/_grid.scss';
+@import './core/_css3.scss';
+@import './core/_mixin.scss';
+@import './core/_media-queries.scss';
+@import './globals/_base.scss';
+@import './globals/_list.scss';
+@import './globals/_btn.scss';
+@import './sections/_margin.scss';
+
+body {
+    overflow-x: hidden;
+    background: #f7f7f7;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 150px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    ul {
+        li {
+            a {
+                font-size: 16px;
+                line-height: 24px;
+                text-decoration: none;
+                color: $blackTwo;
+            }
+        }
+    }
+}
+
+section {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #fff;
+}
+
+.goods {
+    width: 700px;
+    margin: 0 auto;
+    border: 1px solid $blackThree;
+    @extend %clearfix;
+    ul {
+        @extend %margin-list-1;
+    }
+}
+
